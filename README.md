@@ -11,10 +11,9 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 5. [Tutorial: Cara Mengerjakan](#tutorial-cara-mengerjakan)
 6. [Tutorial: Melakukan pull dari upstream](#tutorial-melakukan-pull-dari-upstream)
 7. [Tutorial: Menjalankan Aplikasi Django](#tutorial-menjalankan-aplikasi-django)
-8. [Tutorial: Menampilkan Badge Coverage](#tutorial-menampilkan-badge-coverage)
-9. [Tutorial: Mendeploy Aplikasi](#tutorial-mendeploy-aplikasi)
-10. [Sumber Bacaan](#sumber-bacaan)
-11. [Credit](#credit)
+8. [Tutorial: Mendeploy Aplikasi](#tutorial-mendeploy-aplikasi)
+9. [Sumber Bacaan](#sumber-bacaan)
+10. [Credit](#credit)
 
 
 ## Pendahuluan
@@ -59,17 +58,17 @@ Setiap pekerjaan yang telah diselesaikan oleh mahasiswa harus didemonstrasikan k
 
 Jika Anda sebelumnya belum pernah mengerjakan Tutorial Lab 1,
 
-1. `fork` repositori ini ke akun GitLab milik Anda yang mana nantinya repositori ini akan secara otomatis di-copy ke akun GitLab Anda.
-2. Bukalah halaman repositori anda di URL `https://gitlab.com/<YOURNAME>/pbp-lab` dengan keterangan `<YOURNAME>` sebagai GitLab username Anda.
+1. `fork` repositori ini ke akun GitHub milik Anda yang mana nantinya repositori ini akan secara otomatis di-copy ke akun GitHub Anda.
+2. Bukalah halaman repositori anda di URL `https://github.com/<YOURNAME>/pbp-lab-2023` dengan keterangan `<YOURNAME>` sebagai GitHub username Anda.
 3. Atur URL untuk Clone ke HTTPS dan copy URL tersebut ke clipboard.
-4. Clone repositori tersebut ke komputer Anda dengan menggunakan command `git clone https://gitlab.com/<YOURNAME>/pbp-lab.git <PATH>` dengan keterangan `PATH` sebagai direktori tujuan.
-5. Masuk ke dalam repositori yang telah di-clone pada komputer Anda dan jalankan `git remote add upstream https://gitlab.com/pbp-2022/pbp-lab` untuk menambahkan remote upstream.
+4. Clone repositori tersebut ke komputer Anda dengan menggunakan command `git clone https://github.com/<YOURNAME>/pbp-lab-2023.git <PATH>` dengan keterangan `PATH` sebagai direktori tujuan.
+5. Masuk ke dalam repositori yang telah di-clone pada komputer Anda dan jalankan `git remote add upstream https://github.com/pbp-fasilkom-ui/pbp-lab-2023` untuk menambahkan remote upstream.
 6. Pastikan bahwa repository Anda memiliki visibiltas `Public`. Anda dapat mengaturnya pada halaman **Edit Project**.
 7. Beritahukan kepada asisten dosen Anda bahwa URL dari repositori milik Anda untuk keperluan evaluasi dan penilaian.
 
 Jika Anda pernah mengerjakan Tutorial Lab 1,
 
-1. Masuk ke dalam repositori yang telah di-clone pada komputer Anda dan jalankan `git remote add upstream https://gitlab.com/pbp-2022/pbp-lab` untuk menambahkan remote upstream.
+1. Masuk ke dalam repositori yang telah di-clone pada komputer Anda dan jalankan `git remote add upstream https://github.com/pbp-fasilkom-ui/pbp-lab-2023` untuk menambahkan remote upstream.
 2. Pastikan bahwa repository Anda memiliki visibiltas `Public`. Anda dapat mengaturnya pada halaman **Edit Project**.
 3. Beritahukan kepada asisten dosen Anda bahwa URL dari repositori milik Anda untuk keperluan evaluasi dan penilaian.
 
@@ -82,16 +81,16 @@ Jika Anda pernah mengerjakan Tutorial Lab 1,
 5. Gunakan `git add <FILES/DIRECTORIES>` atau `git rm <FILES/DIRECTORIES>` untuk stage/unstage berkas yang nantinya akan Anda simpan ke Git.
 6. Apabila Anda ingin menyimpan progres Anda secara lokal, Anda dapat melakukan **commit** ke Git. Gunakan perintah `git commit -m "<MESSAGE>"` dengan keterangan `<MESSAGE>` sebagai deskripsi pekerjaan yang akan Anda simpan.
 7. Ulangi langkah 4-6 hingga Anda selesai mengerjakan tugas Anda.
-8. Setelah Anda siap untuk mengumpulkan pekerjaan Anda atau Anda ingin menyimpannya pada repositori GitLab Anda, lakukan sebuah **push**. Anda dapat menggunakan perintah `git push origin <NAMA_BRANCH>` dengan keterangan `<NAMA_BRANCH>` sebagai _branch_ yang Anda tuju untuk penyimpanan di GitLab.
+8. Setelah Anda siap untuk mengumpulkan pekerjaan Anda atau Anda ingin menyimpannya pada repositori GitHub Anda, lakukan sebuah **push**. Anda dapat menggunakan perintah `git push origin <NAMA_BRANCH>` dengan keterangan `<NAMA_BRANCH>` sebagai _branch_ yang Anda tuju untuk penyimpanan di GitHub.
 
 
 ## Tutorial: Melakukan pull dari upstream
 
 Apabila terdapat _update_ dari `upstream`, Anda dapat memperoleh _update commit_ tersebut dan mengintegrasikannya ke dalam repositori Anda secara lokal dengan menggunakan perintah `git pull upstream master`.
 
-Ketika Anda melakukan pull dari upstream, Merge Conflicts dapat terjadi pada komputer lokal Anda maupun GitLab karena repositori berubah-ubah setiap minggunya dan mungkin terdapat perubahan yang bersinggungan dengan branch `master` yang ada pada repositori Anda.
+Ketika Anda melakukan pull dari upstream, Merge Conflicts dapat terjadi pada komputer lokal Anda maupun GitHub karena repositori berubah-ubah setiap minggunya dan mungkin terdapat perubahan yang bersinggungan dengan branch `master` yang ada pada repositori Anda.
 
-Jika terdapat Merge Conflicts, gunakan commits terbaru yang berasal dari repositori `upstream`. Setelah Anda menyelesaikan segala konflik yang terjadi dan sukses menggabungkannya ke `branch` Anda, jangan lupa untuk melakukan `push` lagi ke repositori GitLab Anda dengan perintah `git push origin <NAMA_BRANCH>`.
+Jika terdapat Merge Conflicts, gunakan commits terbaru yang berasal dari repositori `upstream`. Setelah Anda menyelesaikan segala konflik yang terjadi dan sukses menggabungkannya ke `branch` Anda, jangan lupa untuk melakukan `push` lagi ke repositori GitHub Anda dengan perintah `git push origin <NAMA_BRANCH>`.
 
 ## Tutorial: Menjalankan Aplikasi Django
 
@@ -128,40 +127,6 @@ pip install -r requirements.txt
 deactivate
 ```
 
-## Tutorial: Menampilkan Badge Coverage
-
-1. Masuk ke Halaman CI/CD Settings (`Settings -> CI/CD`)
-2. Masuk ke bagian General pipelines dan cari bagian test coverage parsing (`General pipelines -> Test coverage parsing`)
-3. Masukkan _regex_ berikut pada _textbox_ Test Coverage Parsing
-```
-TOTAL\s+\d+\s+\d+\s+(\d+)%
-```
-4. Simpan perubahannya.
-5. Untuk menambahkan badge coverage pada proyek GitLab seperti ini [![Pipeline](https://gitlab.com/pbp-2023/pbp-lab/badges/master/pipeline.svg)](https://gitlab.com/pbp-2023/pbp-lab/pipelines) [![Coverage](https://gitlab.com/pbp-2023/pbp-lab/badges/master/coverage.svg)](https://gitlab.com/pbp-2023/pbp-lab/pipelines) :
-    - Pada header repositori dari proyek:
-        1. Masuk ke Halaman CI/CD Settings (`Settings -> General`)
-        2. Pergi ke bagian badges.
-        3. Buatlah sebuah badge baru untuk pipeline dengan konfigurasi URL:
-        ```
-        https://gitlab.com/%{project_path}/badges/%{default_branch}/pipeline.svg
-        ```
-        4. dan untuk coverage badge:
-        ```
-        https://gitlab.com/%{project_path}/badges/%{default_branch}/coverage.svg
-        ```
-    - Pada berkas README.md
-        1. Tambahkan 2 baris berikut pada README.md Anda:
-        ```
-        [![Pipeline](https://gitlab.com/YOUR_GITLAB_USERNAME/YOUR_REPOSITORY_NAME/badges/master/pipeline.svg)](https://gitlab.com/YOUR_GITLAB_USERNAME/YOUR_REPOSITORY_NAME/pipelines)
-        [![Coverage](https://gitlab.com/YOUR_GITLAB_USERNAME/YOUR_REPOSITORY_NAME/badges/master/coverage.svg)](https://gitlab.com/YOUR_GITLAB_USERNAME/YOUR_REPOSITORY_NAME/pipelines)
-        ```
-        2. Ubah `YOUR_GITLAB_USERNAME` dan `YOUR_REPOSITORY_NAME` sesuai dengan repositori Anda. Berikut adalah contoh untuk repositori ini:
-        ```
-        [![Pipeline](https://gitlab.com/pbp-2023/pbp-lab/badges/master/pipeline.svg)](https://gitlab.com/pbp-2023/pbp-lab/pipelines)
-        [![Coverage](https://gitlab.com/pbp-2023/pbp-lab/badges/master/coverage.svg)](https://gitlab.com/pbp-2023/pbp-lab/pipelines)
-        ```
-6. Jalankan ulang pipeline untuk memperbarui status dari pipeline dan coverage. Anda dapat melakukan commit dan push ulang atau mengulang kembali pipeline yang sebelumnya pernah dijalankan.
-
 ## Tutorial: Men-deploy Aplikasi
 
 Apabila sebelumnya Anda belum memiliki akun Heroku dan/atau sebuah aplikasi Heroku aktif,
@@ -174,12 +139,11 @@ Setelah Anda memiliki aplikasi Heroku,
 ```
 HEROKU_API_KEY: <VALUE_API_KEY_ANDA>
 HEROKU_APP_NAME: <NAMA_APLIKASI_HEROKU_ANDA>
-HEROKU_APP_HOST: <URL_APLIKASI_HEROKU_ANDA>
 ```
-2. Bukalah konfigurasi repositori GitLab Anda bagian CI/CD (`Settings -> CI/CD`).
-3. Tambahkan variabel baru untuk melakukan deployment. Pasangan Key-Value dari variabel yang akan Anda buat dapat Anda ambil dari informasi yang Anda catat pada notepad sebelumnya. Sebagai contoh:
+2. Bukalah konfigurasi repositori GitHub Anda bagian Secrets untuk GitHub Actions (`Settings -> Secrets -> Actions`).
+3. Tambahkan variabel `repository secret` baru untuk melakukan deployment. Pasangan Name-Value dari variabel yang akan Anda buat dapat Anda ambil dari informasi yang Anda catat pada notepad sebelumnya. Sebagai contoh:
 ```
-(KEY)HEROKU_APP_NAME
+(NAME)HEROKU_APP_NAME
 (VALUE)APLIKASI-SAYA
 ```
 4. Simpan variabel-variabel tersebut.
@@ -189,34 +153,58 @@ web: gunicorn aplikasi_django.wsgi --log-file -
 ```
 >Ubah `aplikasi_django` sesuai dengan aplikasi yang hendak Anda deploy.
 
-6. Buatlah sebuah berkas baru bernama `gitlab-ci.yml` di _root_ dari repositori Anda. Berkas ini digunakan untuk mengeksekusi deployment oleh runner dari GitLab. Isi dari berkas tersebut adalah sebagai berikut:
+6. Buatlah sebuah berkas baru bernama `dpl.yml` di _.github/workflows_ dari repositori Anda. Berkas ini digunakan untuk mengeksekusi deployment oleh runner dari GitHub Actions. Copy dan paste baris script di bawah ini ke berkas `dpl.yml`:
 ```
-Deployment:
-  image: ruby:2.4
-  stage: deploy
-  before_script:
-    - gem install dpl
-    - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-  script:
-    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
-    - export HEROKU_API_KEY=$HEROKU_API_KEY
-    - heroku run --app $HEROKU_APP_NAME python manage.py migrate
-  environment:
-    name: production
-    url: $HEROKU_APP_HOST
+name: Deploy
+
+on:
+  push:
+    branches-ignore:
+      - template
+  pull_request:
+    branches-ignore:
+      - template
+
+jobs:
+  Deployment:
+    runs-on: ubuntu-latest
+    env:
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby 2.7
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - name: Install dpl
+      run: gem install dpl
+    - name: Install Heroku CLI
+      run: wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+    - name: Deploy to Heroku
+      run: dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+    - name: Run migrations on Heroku
+      run: heroku run --app $HEROKU_APP_NAME migrate
+    - uses: chrnorm/deployment-action@releases/v1
+      name: Create GitHub deployment
+      with:
+        initial_status: success
+        token: ${{ github.token }}
+        target_url: https://${{ secrets.HEROKU_APP_NAME }}.herokuapp.com
+        environment: production
 ```
 
-7. **Add**, **Commit** dan **Push** berkas-berkas tersebut ke repositori GitLab Anda dengan perintah `git push origin <NAMA_BRANCH>`.
-8. Jalankan/jalankan kembali pipeline dari aplikasi Anda di GitLab. Anda dapat menemukan pipeline tersebut di sidebar kiri (`CI/CD -> Pipelines`).
-> Perhatian! Proses pipeline mungkin saja terjadi **kegagalan** dikarenakan berbagai sebab. Kegagalan dari pipeline dapat Anda lihat di repositori GitLab Anda dengan adanya simbol silang merah atau di badge Pipeline dengan adanya status `pipeline: failed`.
+7. **Add**, **Commit** dan **Push** berkas-berkas tersebut ke repositori GitHub Anda dengan perintah `git push origin <NAMA_BRANCH>`.
+8. Jalankan/jalankan kembali workflow deployment dari aplikasi Anda di GitHub Actions. Anda dapat menemukan GitHub Actions tersebut di tab pada repositori Anda (`GitHub Actions -> Workflows`).
+> Perhatian! Proses workflow mungkin saja terjadi **kegagalan** dikarenakan berbagai sebab. Kegagalan dari workflow dapat Anda lihat di repositori GitHub Anda dengan adanya simbol silang merah.
 >
-> Apabila pipeline Anda gagal karena _dependencies_ atau konfigurasi dari aplikasi, periksa ulang konfigurasi aplikasi Django serta versi dari _dependencies_ yang digunakan. Pastikan semuanya berjalan dengan lancar di lokal Anda sebelum Anda melakukan proses _deployment_.
+> Apabila workflow Anda gagal karena _dependencies_ atau konfigurasi dari aplikasi, periksa ulang konfigurasi aplikasi Django serta versi dari _dependencies_ yang digunakan. Pastikan semuanya berjalan dengan lancar di lokal Anda sebelum Anda melakukan proses _deployment_.
 >
-> Apabila pipeline Anda gagal karena permasalahan GitLab atau runner, cukup jalankan kembali pipelines. Permasalahan ini terkadang muncul ketika runner dari GitLab sedang sibuk atau mengalami kegagalan dari server GitLab.
+> Apabila workflow Anda gagal karena permasalahan dari GitHub Actions atau runner, cukup jalankan kembali workflow tersebut. Permasalahan ini terkadang muncul ketika runner dari GitHub Actions sedang sibuk atau mengalami kegagalan dari server GitHub.
 >
-> Apabila status pipeline pending, Anda hanya perlu menunggu giliran pipeline yang Anda sedang jalankan untuk dieksekusi oleh runner GitLab.
+> Apabila status workflow pending, Anda hanya perlu menunggu giliran workflow yang Anda sedang jalankan untuk dieksekusi oleh runner GitHub.
 
-9. Jika seluruh proses dari pipeline berhasil dieksekusi, Anda dapat melihat terdapat sebuah tanda centang hijau yang menandakan bahwa proses pipeline telah berhasil. Apabila Anda menambahkan badges Pipelines pada repositori Anda, status dari badges ini akan secara otomatis diperbarui berdasarkan pipeline yang baru saja dijalankan.
+9. Jika seluruh proses dari workflow berhasil dieksekusi, Anda dapat melihat terdapat sebuah tanda centang hijau pada repositori Anda yang menandakan bahwa proses workflow telah berhasil. Apabila Anda menambahkan badges status README pada repositori Anda, status dari badges ini akan secara otomatis diperbarui berdasarkan workflow yang baru saja dijalankan.
 
 10. Anda dapat mengakses aplikasi Anda yang sudah ter-deploy pada URL aplikasi Heroku yang Anda gunakan.
 ## Sumber Bacaan
